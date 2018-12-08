@@ -1,0 +1,30 @@
+.burger-button {
+	display: none;
+	width: 32.5px;
+	height: 25.5px;
+	cursor: pointer;
+	&__line {
+		display: block;
+		height: 5px;
+		width: 32px;
+		background-color: @primari_color;
+		margin-bottom: 5px;
+		transform-origin: 0 0;
+		transition: 0.5s;
+	}
+	@media screen and (max-width: 680px) {
+		display: inline-block;
+		float: right;
+		margin-right: 25px;
+		padding-top: 27px;
+	}
+	&__checkbox {
+		display: none;
+	}
+}
+.line2 {
+	margin-bottom: 6px;
+}
+//.burger-button__checkbox:checked ~ .nav__animation {
+//	animation-direction: reverse;
+//}

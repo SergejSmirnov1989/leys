@@ -1,0 +1,38 @@
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 150px;
+	height: 100vh;
+	padding-top: 26px;
+	background-color: @header_color;
+	@media screen and (max-width: 1020px) {
+		width: 110px;
+	}
+	@media screen and (max-width: 680px) {
+		width: 100vw;
+		height: 80px;
+		padding-top: 0;
+	}
+	&__logo {
+		margin: 0 auto 15px;
+		@media screen and (max-width: 680px) {
+			display: inline-block;
+			margin: 14px 0 0 19px;
+		}
+	}
+	&__text {
+		font-family: GothamPro-Medium;
+		font-size: 16px;
+		color: @primari_color;
+		@media screen and (max-width: 680px) {
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left:50%;
+			transform: translateX(-50%) translateY(-55%);
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+	}
+}

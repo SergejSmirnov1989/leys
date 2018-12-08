@@ -1,0 +1,62 @@
+@keyframes nav_link-left {
+	from {
+		left: 20%;
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		left: 0;
+	}
+}
+@keyframes nav_link-right {
+	from {
+		right: 20%;
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+		right: 0;
+	}
+}
+@keyframes nav_link-closet-left {
+	from {
+		opacity: 1;
+		left: 0;
+	}
+	99% {
+		left: 20%;
+		opacity: 0;
+	}
+	to {
+		left: 100%;
+	}
+}
+@keyframes nav_link-closet-right {
+	from {
+		opacity: 1;
+		right: 0;
+	}
+	99% {
+		right: 20%;
+		opacity: 0;
+	}
+	to {
+		right: 100%;
+	}
+}
+.nav__animation {
+	animation-duration: .5s;
+	animation-fill-mode: both;
+}
+.nav__animation_left {
+	animation-name: nav_link-left;
+}
+.nav__animation_right {
+	animation-name: nav_link-right;
+}
+.nav__animation_closed-left {
+	animation-name: nav_link-closet-left;
+}
+.nav__animation_closed-right {
+	animation-name: nav_link-closet-right;
+}
