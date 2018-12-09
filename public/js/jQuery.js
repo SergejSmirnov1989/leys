@@ -32,5 +32,5 @@ class JQuery {
 	}
 }
 function $(selector) {
-	return new JQuery(selector)
+	return new JQuery(selector);
 }
