@@ -47,6 +47,12 @@
 .nav__animation {
 	animation-duration: .5s;
 	animation-fill-mode: both;
+	&:nth-child(2n) {
+		left: 100%;
+	}
+	&:nth-child(2n+1) {
+		right: 100%
+	}
 }
 .nav__animation_left {
 	animation-name: nav_link-left;
