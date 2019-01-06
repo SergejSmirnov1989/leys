@@ -1,0 +1,18 @@
+.summer__img {
+	position: relative;
+	width: 50%;
+	background-image: url("../img/lays_img.jpg");
+	background-size: 106% 104.5%;
+	background-position: -14.5px;
+	transition-duration: 10s;
+	transition-timing-function: ease;
+	transition-property: transform;
+	@media screen and (max-width: 680px) {
+		width: 100%;
+		padding-top: 108%;
+		order: 1;
+		background-image: url("../img/lays_img_mobile.jpg");
+		background-position: -.5px -2px;
+		background-size: cover;
+	}
+}

@@ -1,0 +1,27 @@
+.btn {
+	width: 5.5rem;
+	height: 1.59rem;
+	background-color: @btn_background;
+	border: 2px solid #fff;
+	text-align: center;
+	font-size: .57rem;
+	color: #fff;
+	letter-spacing: 1px;
+	line-height: 1.79rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition-duration: .5s;
+	transition-property: background-color;
+	@media screen and (max-width: 1400px) {
+		line-height: 1.79rem;
+	}
+	@media screen and (max-width: 680px) {
+		width: 14.95rem;
+		height: 4.2rem;
+		line-height: 4.27rem;
+		font-size: 1.43rem;
+	}
+	&:hover {
+		background-color: @btn_background_hover;
+	}
+}

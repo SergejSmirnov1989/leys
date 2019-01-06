@@ -1,0 +1,21 @@
+.about__img {
+	position: relative;
+	width: 50%;
+	background-image: url("../img/about_img.jpg");
+	background-size: 106% 104.5%;
+	background-position: -14.5px -16px;
+	transition-duration: 10s;
+	transition-timing-function: ease;
+	transition-property: transform;
+	@media screen and (max-width: 1400px) {
+		background-position: -12.5px -15px;
+	}
+	@media screen and (max-width: 680px) {
+		width: 100%;
+		padding-top: 111%;
+		background-image: url(../img/about_img_mobile.jpg);
+		background-position: center;
+		background-size: cover;
+		margin-bottom: -45px;
+	}
+}

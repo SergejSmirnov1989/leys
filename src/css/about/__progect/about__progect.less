@@ -1,0 +1,51 @@
+.about__progect {
+	position: relative;
+	background-image: url("../img/about_block.png");
+	background-size: cover;
+	padding-top: 52%;
+	width: 50%;
+	color: white;
+	z-index: 100;
+	@media screen and (max-width: 680px) {
+		width: 100%;
+		margin-bottom: -42px;
+		padding-top: 97.5%;
+		background-image: url("../img/about_block_mobile.png");
+		background-size: 100% 100%;
+	}
+	&::before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 3.7rem;
+		left: 99%;
+		width: 1.67rem;
+		padding-top: 3.86rem;
+		background-image: url(../img/arrow.png);
+		background-size: 100% 100%;
+		@media screen and (max-width: 1400px) {
+			left: 98.9%;
+		}
+		@media screen and (max-width: 680px) {
+			display: none;
+		}
+	}
+	&::after {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 2.3rem;
+		left: 1.2rem;
+		width: 6rem;
+		padding-top: 6.65rem;
+		background-image: url("../img/about_block_icons.png");
+		background-size: 100% 100%;
+		@media screen and (max-width: 1400px) {
+			top: 2.34rem;
+			padding-top: 6.63rem;
+		}
+		@media screen and (max-width: 680px) {
+			display: none;
+		}
+	}
+}

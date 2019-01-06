@@ -1,0 +1,33 @@
+@max-width-s: 1030px;
+@max-width-m: 1400px;
+@max-width-l: 1848px;
+
+.generate-size-large-screen(@i: @max-width-l, @font-size: 54px) when (@i > @max-width-m) {
+	@media screen and (min-width: @i) {
+		html {
+			font-size: @font-size
+		}
+	}
+	.generate-size-large-screen(@i - 32, @font-size - 1);
+}
+.generate-size-large-screen();
+
+.generate-size-medium-screen(@i: @max-width-m, @font-size: 40px) when (@i > @max-width-s) {
+	@media screen and (min-width: @i) {
+		html {
+			font-size: @font-size
+		}
+	}
+	.generate-size-medium-screen(@i - 31, @font-size - 1);
+}
+.generate-size-medium-screen();
+
+.generate-size-small-screen(@i: @max-width-s, @font-size: 28px) when (@i > 240px) {
+	@media screen and (min-width: @i) {
+		html {
+			font-size: @font-size
+		}
+	}
+	.generate-size-small-screen(@i - 32, @font-size - 1);
+}
+.generate-size-small-screen();

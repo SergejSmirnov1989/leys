@@ -1,0 +1,16 @@
+.summer {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	&:hover>.summer__img {
+		transform: scale(1.13);
+		@media screen and (max-width: 1400px) {
+			transform: none;
+		}
+	}
+	@media screen and (max-width: 680px) {
+		position: relative;
+		background-color: white;
+		margin-bottom: -37px;
+	}
+}

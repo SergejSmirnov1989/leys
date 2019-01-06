@@ -1,0 +1,22 @@
+.about {
+	display: flex;
+	flex-wrap: wrap;
+	overflow: hidden;
+	&:hover>.about__img {
+		transform: scale(1.13);
+		@media screen and (max-width: 1400px) {
+			transform: none;
+		}
+	}
+	&__desktop {
+		@media screen and (max-width: 680px) {
+			display: none;
+		}
+	}
+	&__mobile {
+		display: none;
+		@media screen and (max-width: 680px) {
+			display: block;
+		}
+	}
+}

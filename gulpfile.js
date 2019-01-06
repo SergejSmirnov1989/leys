@@ -32,7 +32,7 @@ function style() {
 };
 
 function watch (){
-	gulp.watch('./src/css/**/*.less', style);
+	gulp.watch('./src/css/**/*.less',{usePolling: true}, style);
 }
 
 function grid() {

@@ -1,0 +1,34 @@
+.summer__map {
+	position: relative;
+	width: 50%;
+	padding-top: 52%;
+	background-image: url("../img/lays_block.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	z-index: 100;
+	@media screen and (max-width: 680px) {
+		width: 100%;
+		margin-bottom: -35px;
+		padding-top: 98%;
+		background-image: url(../img/lays_block_mobile.png);
+		background-position-y: 5px;
+		background-size: 100% 99%;
+	}
+	&::before {
+		display: block;
+		content: "";
+		position: absolute;
+		top: 6.6rem;
+		left: -1.6rem;
+		width: 1.65rem;
+		padding-top: 23%;
+		background-image: url(../img/arrow2.png);
+		background-size: cover;
+		@media screen and (max-width: 1400px) {
+			top: 18.8vw;
+		}
+		@media screen and (max-width: 680px) {
+			display: none;
+		}
+	}
+}
