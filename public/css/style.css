@@ -59,17 +59,17 @@
 }
 
 .icon__text {
-  color: #f32a34;
+  color: #f73934;
 }
 
 .btn {
   width: 5.5rem;
   height: 1.59rem;
   background-color: rgba(143,12,0,.1);
-  border: 2px solid #fff;
+  border: 2px solid #f6f6f6;
   text-align: center;
   font-size: .57rem;
-  color: #fff;
+  color: #f6f6f6;
   letter-spacing: 1px;
   line-height: 1.79rem;
   text-transform: uppercase;
@@ -170,7 +170,7 @@
 .nav__text {
   font-family: GothamPro-Medium;
   font-size: 16px;
-  color: #f32a34;
+  color: #f73934;
 }
 
 .nav__item {
@@ -208,6 +208,7 @@
 }
 
 .nav__button {
+  display: none;
   position: relative;
   box-sizing: border-box;
   width: 100%;
@@ -235,39 +236,8 @@
   border-color: #ddd;
 }
 
-.nav__animation {
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-.nav__animation:nth-child(2n) {
-  left: 100%;
-}
-
-.nav__animation:nth-child(2n+1) {
-  right: 100%;
-}
-
-.nav__animation_left {
-  -webkit-animation-name: nav_link-left;
-  animation-name: nav_link-left;
-}
-
-.nav__animation_right {
-  -webkit-animation-name: nav_link-right;
-  animation-name: nav_link-right;
-}
-
-.nav__animation_closed-left {
-  -webkit-animation-name: nav_link-closet-left;
-  animation-name: nav_link-closet-left;
-}
-
-.nav__animation_closed-right {
-  -webkit-animation-name: nav_link-closet-right;
-  animation-name: nav_link-closet-right;
+.nav_hidden-top {
+  top: -80px;
 }
 
 .burger-button {
@@ -281,7 +251,7 @@
   display: block;
   height: 5px;
   width: 32px;
-  background-color: #f32a34;
+  background-color: #f73934;
   margin-bottom: 5px;
   -webkit-transform-origin: 0 0;
   transform-origin: 0 0;
@@ -417,7 +387,7 @@
   top: 10.2rem;
   left: 2.1rem;
   padding: 0 .19rem;
-  background-color: #fff;
+  background-color: #f6f6f6;
   font-family: GothamPro;
   color: #f73934;
   font-size: 1rem;
@@ -565,6 +535,11 @@
   position: absolute;
   top: 11.99rem;
   left: 2.14rem;
+  background-color: rgba(255,245,159,.1);
+}
+
+.about__btn:hover {
+  background-color: darcen(rgba(255,245,159,.1),10);
 }
 
 .about__img {
@@ -617,6 +592,7 @@
   left: 3.15rem;
   font-family: GothamPro-Bold;
   font-size: 1.5rem;
+  white-space: nowrap;
 }
 
 .summer__btn {
@@ -668,7 +644,7 @@
   display: flex;
 }
 
-@-webkit-keyframes nav_link-left {
+@-webkit-keyframes link-left {
   from {
     left: 20%;
     opacity: 0;
@@ -680,7 +656,7 @@
   }
 }
 
-@keyframes nav_link-left {
+@keyframes link-left {
   from {
     left: 20%;
     opacity: 0;
@@ -692,7 +668,7 @@
   }
 }
 
-@-webkit-keyframes nav_link-right {
+@-webkit-keyframes link-right {
   from {
     right: 20%;
     opacity: 0;
@@ -704,7 +680,7 @@
   }
 }
 
-@keyframes nav_link-right {
+@keyframes link-right {
   from {
     right: 20%;
     opacity: 0;
@@ -713,77 +689,13 @@
   to {
     opacity: 1;
     right: 0;
-  }
-}
-
-@-webkit-keyframes nav_link-closet-left {
-  from {
-    opacity: 1;
-    left: 0;
-  }
-
-  99% {
-    left: 20%;
-    opacity: 0;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@keyframes nav_link-closet-left {
-  from {
-    opacity: 1;
-    left: 0;
-  }
-
-  99% {
-    left: 20%;
-    opacity: 0;
-  }
-
-  to {
-    left: 100%;
-  }
-}
-
-@-webkit-keyframes nav_link-closet-right {
-  from {
-    opacity: 1;
-    right: 0;
-  }
-
-  99% {
-    right: 20%;
-    opacity: 0;
-  }
-
-  to {
-    right: 100%;
-  }
-}
-
-@keyframes nav_link-closet-right {
-  from {
-    opacity: 1;
-    right: 0;
-  }
-
-  99% {
-    right: 20%;
-    opacity: 0;
-  }
-
-  to {
-    right: 100%;
   }
 }
 
 .animation-left {
   left: 100%;
-  -webkit-animation-name: nav_link-left;
-  animation-name: nav_link-left;
+  -webkit-animation-name: link-left;
+  animation-name: link-left;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -792,8 +704,8 @@
 
 .animation-right {
   right: 100%;
-  -webkit-animation-name: nav_link-right;
-  animation-name: nav_link-right;
+  -webkit-animation-name: link-right;
+  animation-name: link-right;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -1263,6 +1175,10 @@
     height: 50px;
   }
 
+  .header__text_l {
+    line-height: 2.4rem;
+  }
+
   .footer {
     height: 50px;
   }
@@ -1323,6 +1239,8 @@
     width: 100%;
     height: 80px;
     padding-top: 0;
+    transition-duration: .5s;
+    transition-property: top;
   }
 
   .nav__icon {
@@ -1373,6 +1291,14 @@
     text-align: inherit;
     line-height: inherit;
     border: none;
+  }
+
+  .nav__button {
+    display: block;
+  }
+
+  .nav__animation_js {
+    right: 100%;
   }
 
   .burger-button {
@@ -1451,8 +1377,8 @@
   .gallery__social {
     top: 3.55rem;
     left: 3rem;
-    width: 17rem;
-    padding-top: 36%;
+    width: 17.5rem;
+    padding-top: 15.4rem;
     background-image: url(../img/to_gallery_mobile.png);
   }
 
@@ -1529,7 +1455,8 @@
   }
 
   .about__btn {
-    top: 30.7rem;
+    top: auto;
+    bottom: 6.35rem;
     left: 13.85rem;
     font-size: 1.45rem;
   }
@@ -1563,14 +1490,20 @@
   }
 
   .summer__text {
-    top: 25.9rem;
-    left: 9.4rem;
+    top: auto;
+    bottom: 11.45rem;
+    left: 50%;
+    -webkit-transform: translateX(-48%);
+    transform: translateX(-48%);
     font-size: 3.95rem;
   }
 
   .summer__btn {
-    top: 31.95rem;
-    left: 14.4rem;
+    top: auto;
+    bottom: 5.45rem;
+    left: 50%;
+    -webkit-transform: translateX(-45%);
+    transform: translateX(-45%);
   }
 
   .summer__img {

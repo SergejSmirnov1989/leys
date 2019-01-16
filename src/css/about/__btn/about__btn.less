@@ -2,12 +2,17 @@
 	position: absolute;
 	top: 11.99rem;
 	left: 2.14rem;
+	background-color: @btn_about;
+	&:hover {
+		background-color: darcen(@btn_about, 10);
+	}
 	@media screen and (max-width: 1400px) {
 		top: 12.01rem;
 		left: 2.15rem;
 	}
 	@media screen and (max-width: 680px) {
-		top: 30.7rem;
+		top: auto;
+		bottom: 6.35rem;
 		left: 13.85rem;
 		font-size: 1.45rem;
 	}

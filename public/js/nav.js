@@ -1,44 +1,100 @@
-let button = $(".burger-button");
-let navAnimation = $('.nav__animation_js');
-let navButton = $('.nav__button');
+let button = document.querySelector('.burger-button');
+let navAnimation = document.querySelectorAll('.nav__animation_js');
+let closeNav = document.querySelector('.nav__button');
+let nav = document.querySelector('.nav');
 
-function animationNav() {
-	toggle(button.element[0], ['burger-button_is-opened']);
-	for (let i = 0; i < navAnimation.element.length; i++) {
-		if (!conteinOr(navAnimation.element[i], ['nav__animation_left', 'nav__animation_closed-left',
-			'nav__animation_right', 'nav__animation_closed-right'])) {
-			if (i % 2 == 0) {
-				navAnimation.element[i].classList.add('nav__animation_left');
-			} else {
-				navAnimation.element[i].classList.add('nav__animation_right');
-			}
+function drawClose(progress) {
+	for (let i = 0; i < navAnimation.length; i++) {
+		let elem = navAnimation[i];
+		let draw = progress * (-20) + '%';
+		if (i % 2 === 0) {
+			elem.style.right = draw;
 		} else {
-			if (conteinOr(navAnimation.element[i], ['nav__animation_left',
-				'nav__animation_closed-left'])) {
-				toggle(navAnimation.element[i], ['nav__animation_left',
-					'nav__animation_closed-left'])
-			} else if (conteinOr(navAnimation.element[i], ['nav__animation_right',
-				'nav__animation_closed-right'])) {
-				toggle(navAnimation.element[i], ['nav__animation_right',
-					'nav__animation_closed-right']);
-			}
+			elem.style.left = draw;
+		}
+		elem.style.opacity = -progress + 1;
+		if (progress === 1) {
+			elem.style.display = 'none';
 		}
 	}
-};
+}
 
-$(window).on('load', function () {
-	if (document.documentElement.clientWidth < 680) {
-		$('.nav__animation_js').add('nav__animation');
+function drawOpen(progress) {
+	for (let i = 0; i < navAnimation.length; i++) {
+		let draw = progress * 20 + (-20) + '%';
+		let elem = navAnimation[i];
+		elem.style.display = 'block';
+		if (i % 2 === 0) {
+			elem.style.right = draw;
+		} else {
+			elem.style.left = draw;
+		}
+		elem.style.opacity = progress;
 	}
+}
+
+function setAnimationOption(flag) {
+	if (flag) {
+		return {
+			duration: 500,
+			timingFunction: powEaseIn(pow),
+			draw: drawClose
+		}
+	}
+	return {
+		duration: 500,
+		timingFunction: powEaseIn(pow),
+		draw: drawOpen
+
+	}
+}
+
+let flag = false;
+let lastScrollTop = window.pageYOffset;
+
+button.addEventListener('click', function () {
+	animation(setAnimationOption(flag));
+	flag = !flag;
+});
+button.addEventListener('click', function () {
+	button.classList.toggle('burger-button_is-opened');
 });
 
-$(window).on('resize', function () {
+closeNav.addEventListener('click', function () {
+	animation(setAnimationOption(true));
+	button.classList.remove('burger-button_is-opened');
+	flag = false;
+});
+
+window.addEventListener('resize', function () {
 	if (document.documentElement.clientWidth > 680) {
-		$('.nav__animation_js').remove('nav__animation');
-	} else if (document.documentElement.clientWidth <= 680) {
-		$('.nav__animation_js').add('nav__animation');
+		for (let i = 0; i < navAnimation.length; i++) {
+			navAnimation[i].style = ''
+		}
+		button.classList.remove('burger-button_is-opened');
+		flag = false;
 	}
 });
 
-button.on('click', animationNav);
-navButton.on('click', animationNav);
+window.addEventListener('scroll', function (e) {
+	let scrolled = window.pageYOffset;
+	if (document.documentElement.clientWidth > 680) {
+		return;
+	}
+	if (scrolled < 80) {
+		nav.classList.remove('nav_hidden-top');
+		return
+	}
+	if (scrolled > lastScrollTop) {
+		if (flag) {
+			animation(setAnimationOption(flag));
+			button.classList.remove('burger-button_is-opened');
+			flag = false;
+		}
+		nav.classList.add('nav_hidden-top');
+
+	} else {
+		nav.classList.remove('nav_hidden-top');
+	}
+	lastScrollTop = scrolled;
+});

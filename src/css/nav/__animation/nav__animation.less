@@ -1,22 +1,9 @@
-.nav__animation {
-	animation-duration: .5s;
-	animation-fill-mode: both;
-	&:nth-child(2n) {
-		left: 100%;
-	}
-	&:nth-child(2n+1) {
-		right: 100%
+.nav__animation_js {
+	@media screen and (max-width: 680px) {
+		right: 100%;
 	}
 }
-.nav__animation_left {
-	animation-name: nav_link-left;
+.nav_hidden-top {
+	top: -80px;
 }
-.nav__animation_right {
-	animation-name: nav_link-right;
-}
-.nav__animation_closed-left {
-	animation-name: nav_link-closet-left;
-}
-.nav__animation_closed-right {
-	animation-name: nav_link-closet-right;
-}
+

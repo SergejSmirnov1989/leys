@@ -1,9 +1,9 @@
 function putAside(selector, value, aside) {
 	let elem = $(selector).element[0];
 	let away = aside || 'left';
-	if (away == 'left') {
+	if (away === 'left') {
 		elem.style.left = value;
-	} else if (away == 'right') {
+	} else if (away === 'right') {
 		elem.style.right = value;
 	} else {
 		console.log('I`m not the one you want!');

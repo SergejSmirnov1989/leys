@@ -1,4 +1,4 @@
-@keyframes nav_link-left {
+@keyframes link-left {
 	from {
 		left: 20%;
 		opacity: 0;
@@ -8,7 +8,7 @@
 		left: 0;
 	}
 }
-@keyframes nav_link-right {
+@keyframes link-right {
 	from {
 		right: 20%;
 		opacity: 0;
@@ -18,41 +18,16 @@
 		right: 0;
 	}
 }
-@keyframes nav_link-closet-left {
-	from {
-		opacity: 1;
-		left: 0;
-	}
-	99% {
-		left: 20%;
-		opacity: 0;
-	}
-	to {
-		left: 100%;
-	}
-}
-@keyframes nav_link-closet-right {
-	from {
-		opacity: 1;
-		right: 0;
-	}
-	99% {
-		right: 20%;
-		opacity: 0;
-	}
-	to {
-		right: 100%;
-	}
-}
+
 .animation-left {
 	left: 100%;
-	animation-name: nav_link-left;
+	animation-name: link-left;
 	animation-duration: 1s;
 	animation-fill-mode: both;
 }
 .animation-right {
 	right: 100%;
-	animation-name: nav_link-right;
+	animation-name: link-right;
 	animation-duration: 1s;
 	animation-fill-mode: both;
 }

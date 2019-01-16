@@ -18,18 +18,6 @@ class JQuery {
 		}
 		return this;
 	}
-	remove (className) {
-		for (let i = 0; i < this.element.length; i++) {
-			this.element[i].classList.remove(className);
-		}
-		return this;
-	}
-	toggly (className) {
-		for (let i = 0; i < this.element.length; i++) {
-			this.element[i].classList.toggle(className);
-		}
-		return this;
-	}
 }
 function $(selector) {
 	return new JQuery(selector);
