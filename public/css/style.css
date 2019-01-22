@@ -1512,3 +1512,94 @@
     font-size: 8px;
   }
 }
+
+@media screen and (max-width:360px) {
+  .btn {
+    width: 13.95rem;
+    height: 3.9rem;
+  }
+
+  .header {
+    padding-top: 173.5%;
+  }
+
+  .gallery__download {
+    padding-top: 100%;
+  }
+
+  .gallery__social {
+    top: 3.5rem;
+    left: 2.9rem;
+    width: 16.5rem;
+    padding-top: 14.4rem;
+  }
+
+  .gallery__text {
+    top: 18.7rem;
+    left: 4.3rem;
+    line-height: 3.4rem;
+    letter-spacing: -1.1px;
+  }
+
+  .gallery__hashteg {
+    top: 29rem;
+    left: 3.9rem;
+    padding: 0 1rem;
+    line-height: 3.4rem;
+    letter-spacing: -2.1px;
+  }
+
+  .gallery__btn {
+    top: 28.8rem;
+  }
+
+  .gallery__over-photo {
+    padding-top: 32.1%;
+    margin-bottom: 0;
+  }
+
+  .about__progect {
+    padding-top: 100%;
+    margin-bottom: -32px;
+  }
+
+  .about__header {
+    top: 5.3rem;
+    left: 4rem;
+    font-size: 3.5rem;
+    line-height: 3.7rem;
+  }
+
+  .about__text {
+    top: 15.9rem;
+    left: 4.1rem;
+    line-height: 2.1rem;
+  }
+
+  .about__btn {
+    bottom: 5.9rem;
+  }
+
+  .about__img {
+    padding-top: 120%;
+    margin-bottom: -32px;
+  }
+
+  .summer {
+    margin-bottom: -12px;
+  }
+
+  .summer__map {
+    margin-bottom: -17px;
+    padding-top: 101%;
+  }
+
+  .summer__text {
+    bottom: 11.2rem;
+    font-size: 3.5rem;
+  }
+
+  .summer__btn {
+    bottom: 5rem;
+  }
+}

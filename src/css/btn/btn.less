@@ -12,6 +12,9 @@
 	cursor: pointer;
 	transition-duration: .5s;
 	transition-property: background-color;
+	&:hover {
+		background-color: @btn_background_hover;
+	}
 	@media screen and (max-width: 1400px) {
 		line-height: 1.79rem;
 	}
@@ -21,7 +24,8 @@
 		line-height: 4.1rem;
 		font-size: 1.43rem;
 	}
-	&:hover {
-		background-color: @btn_background_hover;
+	@media screen and (max-width: 360px) {
+		width: 13.95rem;
+		height: 3.9rem;
 	}
 }
