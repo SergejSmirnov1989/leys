@@ -10,7 +10,7 @@ function putAside(selector, value, aside) {
 	}
 };
 
-if (document.documentElement.clientWidth > 1400) {
+if (document.documentElement.clientWidth > 680) {
 	$('.header').add('animation-left');
 	$('.gallery').add('animation-right');
 	putAside('.about__progect', '55%', 'right');

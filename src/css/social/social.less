@@ -1,6 +1,7 @@
 .social {
 	width: 90px;
 	height: 90px;
+	background-size: 52px;
 	background-repeat: no-repeat;
 	background-position: center;
 	opacity: .85;
@@ -9,6 +10,7 @@
 	@media screen and (max-width: 1400px) {
 		width: 60px;
 		height: 60px;
+		background-size: 36px;
 	}
 	@media screen and (max-width: 1000px) {
 		width: 50px;
@@ -17,53 +19,32 @@
 	@media screen and (max-width: 680px) {
 		width: 45px;
 		height: 42px;
+		background-size: 23px;
 	}
 	&:hover {
 		opacity: 1;
 	}
 	&_fb {
 		background-color: @face_b_color;
-		background-image: url("../img/facebook-logo.png");
-		background-size: 29px;
+		background-image: url("../img/fb.jpg");
 		@media screen and (max-width: 1400px) {
-			background-size: 20px;
+			background-position-x: 54%;
 		}
 		@media screen and (max-width: 680px) {
-			background-size: 12px;
+			background-position-x: center;
 		}
 	}
 	&_vk {
 		background-color: @vk_color;
-		background-image: url("../img/vk-icon.png");
-		background-size: 29px;
-		@media screen and (max-width: 1400px) {
-			background-size: 20px;
-		}
-		@media screen and (max-width: 680px) {
-			background-size: 12px;
-		}
+		background-image: url("../img/vk.jpg");
 	}
 	&_www {
 		background-color: #edbf11;
 		background-image: url("../img/www.jpg");
-		background-size: 51px;
-		@media screen and (max-width: 1400px) {
-			background-size: 36px;
-		}
-		@media screen and (max-width: 680px) {
-			background-size: 23px;
-		}
 	}
 	&_yt {
 		background-color: @you_tube_color;
 		background-image: url("../img/yt.jpg");
-		background-size: 52px;
-		@media screen and (max-width: 1400px) {
-			background-size: 36px;
-		}
-		@media screen and (max-width: 680px) {
-			background-size: 23px;
-		}
 	}
 }
 

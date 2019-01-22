@@ -22,7 +22,7 @@
 }
 .generate-size-medium-screen();
 
-.generate-size-small-screen(@i: @max-width-s, @font-size: 28px) when (@i > 240px) {
+.generate-size-small-screen(@i: @max-width-s, @font-size: 28px) when (@i > 380px) {
 	@media screen and (min-width: @i) {
 		html {
 			font-size: @font-size
@@ -31,3 +31,9 @@
 	.generate-size-small-screen(@i - 32, @font-size - 1);
 }
 .generate-size-small-screen();
+
+html {
+	@media screen and (max-width: 390px) {
+		font-size: 8px;
+	}
+}

@@ -2,9 +2,9 @@
 	position: absolute;
 	top: 11.99rem;
 	left: 2.14rem;
-	background-color: @btn_about;
+	background-color: @btn_about_desktop;
 	&:hover {
-		background-color: darcen(@btn_about, 10);
+		background-color: darken(@btn_about_desktop, 100%);
 	}
 	@media screen and (max-width: 1400px) {
 		top: 12.01rem;
@@ -12,8 +12,15 @@
 	}
 	@media screen and (max-width: 680px) {
 		top: auto;
-		bottom: 6.35rem;
-		left: 13.85rem;
+		bottom: 6.38rem;
+		left: 50%;
 		font-size: 1.45rem;
+		transform: translateX(-49%);
+		height: 4.19rem;
+		line-height: 4.15rem;
+		background-color: @btn_about_mobile;
+		&:hover {
+			background-color: darken(@btn_about_mobile, 80%);
+		}
 	}
 }

@@ -23,6 +23,10 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	@media screen and (max-width: 400px) {
+		width: 100%;
+		padding: 0 5%;
+	}
 }
 .header__icon {
 	width: 13.1%;
@@ -32,6 +36,7 @@
 	line-height: 21px;
 	text-align: center;
 	color: @header_icon;
+	white-space: nowrap;
 	@media screen and (max-width: 1400px) {
 		font-size: 14px;
 		line-height: 17px;
