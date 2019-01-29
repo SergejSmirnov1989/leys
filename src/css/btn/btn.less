@@ -1,8 +1,8 @@
 .btn {
 	width: 5.5rem;
 	height: 1.59rem;
-	background-color: @btn_background;
 	border: 2px solid @header_color;
+	background-color: @btn_background;
 	text-align: center;
 	font-size: .57rem;
 	color: @header_color;
@@ -27,5 +27,20 @@
 	@media screen and (max-width: 360px) {
 		width: 13.95rem;
 		height: 3.9rem;
+	}
+}
+.btn_about {
+	background-color: @btn_about_desktop;
+	&:hover {
+		background-color: darken(@btn_about_desktop, 100%);
+	}
+	@media screen and (max-width: 680px) {
+		height: 4.19rem;
+		background-color: @btn_about_mobile;
+		font-size: 1.45rem;
+		line-height: 4.15rem;
+		&:hover {
+			background-color: darken(@btn_about_mobile, 80%);
+		}
 	}
 }

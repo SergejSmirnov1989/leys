@@ -1,5 +1,5 @@
 let button = document.querySelector('.burger-button');
-let navAnimation = document.querySelectorAll('.nav__animation_js');
+let navAnimation = document.querySelectorAll('.js-nav__animation');
 let closeNav = document.querySelector('.nav__button');
 let nav = document.querySelector('.nav');
 

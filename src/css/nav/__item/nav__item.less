@@ -2,13 +2,13 @@
 	position: relative;
 	width: 100%;
 	height: 118px;
-	text-align: center;
-	font-size: 14px;
-	color: #555;
+	padding-top: 83px;
 	box-sizing: border-box;
 	border-bottom: 1px solid transparent;
 	border-top: 1px solid transparent;
-	padding-top: 83px;
+	text-align: center;
+	font-size: 14px;
+	color: #555;
 	background-color: @header_color;
 	transition-duration: 1s;
 	transition-property: border-color, background-color;
@@ -16,9 +16,9 @@
 	@media screen and (max-width: 680px) {
 		height: 81px;
 		padding-top: 0;
+		border-top: 1px solid rgba(155,155,155,.18);
 		text-align: center;
 		line-height: 79px;
-		border-top: 1px solid rgba(155,155,155,.18);
 	}
 	&:hover {
 		border-color: #ddd;
@@ -27,17 +27,17 @@
 	&_head {
 		height: 178px;
 		padding-top: 0;
-		background-image: none;
 		border: none;
+		background-image: none;
 		&:hover {
-			background-color: @header_color;
 			border: none;
+			background-color: @header_color;
 		}
 		@media screen and (max-width: 680px) {
 			display: block !important;
+			border: none;
 			text-align: inherit;
 			line-height: inherit;
-			border: none;
 		}
 	}
 }
